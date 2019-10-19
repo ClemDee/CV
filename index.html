@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="index.css" />
+        <title>CV</title>
+        <script src="vue.min.js"></script>
+        <link rel="stylesheet" href="fonts/Font-Awesome-master/css/all.min.css" />
+        <link rel="icon" href="images/face.jpg" />
+        <script>let DATA = {}; let data;</script>
+        <script src="translations/data.en.js"></script>
+        <script src="translations/data.es.js"></script>
+        <script src="translations/data.fr.js"></script>
+    </head>
+
+    <body>
+
+        <section class="left">
+
+            <img src="images/face.jpg" alt="face" class="face"/>
+
+            <div class="coordinates" v-auto>
+                <h5> {{ DATA.coordinates.name }}</h5>
+                <div><i class="fas fa-user"></i> {{ DATA.coordinates.age + ", " + DATA.coordinates.nationnality }} </div>
+                <div><i class="fas fa-map-marker-alt"></i> {{ DATA.coordinates.address }} </div>
+                <div><i class="fas fa-map-marker-alt" style="visibility: hidden;"></i> {{ DATA.coordinates.city }} </div>
+                <div><i class="fas fa-envelope"></i> {{ DATA.coordinates.email }} </div>
+                <div><i class="fas fa-phone fa-flip-horizontal" style="text-align: right;"></i> {{ DATA.coordinates.phone }} </div>
+                <div><i class="fab fa-linkedin"></i> {{ DATA.coordinates.linkedin }} </div>
+                <div><i class="fab fa-github"></i> {{ DATA.coordinates.github }} </div>
+            </div>
+
+
+            <div class="objective" v-if="!DATA.objective.hide" v-auto>
+                <h3>{{ DATA.objective.title }}</h3>
+                <div>{{ DATA.objective.content }}</div>
+            </div>
+
+            <div class="hobbies" v-if="!DATA.hobbies.hide" v-auto>
+                <h3>{{ DATA.hobbies.title }}</h3>
+                <div>{{ DATA.hobbies.content }}</div>
+            </div>
+
+            <div class="language" v-if="!DATA.languages.hide" v-auto>
+                <h3>{{ DATA.languages.title }}</h3>
+                <div>
+                    <div v-for="language in DATA.languages.data" v-if="!language.hide">{{ "- " + language.name + " (" + language.level + ")" }}</div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+        <section class="right">
+
+            <h1 v-auto>{{ DATA.title }}</h1>
+
+            <h2 v-auto>{{ DATA.education.title }}</h2>
+
+            <div v-auto>
+                <article class="list-elt" v-for="education in DATA.education.data" v-if="!education.hide">
+                    <div class="head">
+                        <div class="title">{{ education.title }}</div>
+                        <div class="date">{{ education.date }}</div>
+                    </div>
+                    <div class="body">
+                        <div class="location">{{ education.location }}</div>
+                        <div class="details">{{ education.description }}</div>
+                    </div>
+                </article>
+           </div>
+
+
+            <h2 v-auto>{{ DATA.experience.title }}</h2>
+
+            <div v-auto>
+                <article class="list-elt" v-for="experience in DATA.experience.data" v-if="!experience.hide">
+                    <div class="head">
+                        <div class="date">{{ experience.date }}</div>
+                    </div>
+                    <div class="body">
+                        <div class="title">{{ experience.title }}</div>
+                        <div class="details">{{ experience.description }}</div>
+                    </div>
+                </article>
+           </div>
+
+
+
+            <h2 v-auto>{{ DATA.skills.title }}</h2>
+
+            <article class="skills-container" v-auto>
+                <span class="skill" v-for="skill in DATA.skills.skill" v-bind:style="'--level:' + skill.level + '%'">{{ skill.name }}</span>
+            </article>
+
+            <article class="list-elt">
+                <div class="head">
+                    <div class="title" v-auto>{{ DATA.skills.os.title }}</div>
+                </div>
+                <div class="body">
+                    <div class="detail" v-auto>{{ DATA.skills.os.data.join(", ")}}</div>
+                </div>
+            </article>
+
+            <article class="list-elt">
+                <div class="head">
+                    <div class="title" v-auto>{{ DATA.skills.softwares.title }}</div>
+                </div>
+                <div class="body">
+                    <div class="detail" v-auto>{{ DATA.skills.softwares.data.join(", ")}}</div>
+                </div>
+            </article>
+
+        </section>
+
+
+        <div class="translation-menu"></div>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>
+
+
