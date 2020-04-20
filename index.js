@@ -1,34 +1,22 @@
 
-// change translation language
-let changeTranslation = function (translation) {
-    document.querySelector(".translation.current").classList.remove("current");
-    document.querySelector(`.translation.${translation}`).classList.add("current");
-    Vue.set(vueData, "DATA", DATA[translation]);
-}
-
-for (let translation in DATA) {
-    let div = document.createElement("div");
-    div.className = `translation ${translation}`;
-    div.innerText = translation;
-    div.onclick = () => changeTranslation(translation);
-    document.querySelector(".translation-menu").appendChild(div);
-}
 
 
-
-// create vue objects
-let vueData = {};
-let autoVue = function (element) {
-    element.removeAttribute("v-auto");
-    new Vue({
-        el: element,
-        data: vueData,
-    });
-}
-
-data = DATA.fr;
-vueData.DATA = data;
-document.querySelector(".translation.fr").classList.add("current");
-Array.prototype.forEach.call(document.querySelectorAll("[v-auto]"), autoVue);
+let app = new Vue({
+    el: document.querySelector("#app"),
+    data: {
+        DATA: DATA,
+        currentTranslation: "fr",
+    },
+    computed: {
+        data: function () {
+            return this.DATA[this.currentTranslation];
+        }
+    },
+    methods: {
+        changeTranslation: function (translation) {
+            this.currentTranslation = translation;
+        }
+    },
+});
 
 

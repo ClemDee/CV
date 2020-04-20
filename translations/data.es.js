@@ -1,6 +1,6 @@
 DATA.es = {
 
-    translation: "fr",
+    translation: "es",
 
     title: "Estudiante en secund años de ingeniería informàtica",
 
