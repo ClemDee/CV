@@ -1,19 +1,10 @@
 DATA.es = {
 
-    translation: "es",
-
     title: "Estudiante en secund años de ingeniería informàtica",
 
     coordinates: {
-        name: "Clément Desableau",
         age: "21 años",
         nationnality: "Francés",
-        address: "31 Boulevard d'Andilly",
-        city: "95230 Soisy-sous-Montmorency",
-        email: "clement.desableau@gmail.com",
-        phone: "07 80 09 54 70",
-        linkedin: "Clément Desableau",
-        github: "ClemDee",
     },
 
     objective: {
@@ -113,7 +104,7 @@ DATA.es = {
                 title: "TIPE - TIPE - Realización de una Inteligencia Artificial para el juego de mesa Quoridor",
                 date: "2016-2018",
                 location: "EISTI",
-                description: "Comenzando con el lenguaje C# y el software Unity"
+                description: "Comenzando con el lenguaje C# y el software Unity",
             },
         ],
     },
@@ -121,51 +112,14 @@ DATA.es = {
 
     skills: {
         title: "Conocimientos Informáticos",
-        skill: [
-            {name: "Desarrollo web", level: 95},
-            {name: "HTML 5", level: 95},
-            {name: "CSS 3", level: 95},
-            {name: "Javascript", level: 93},
-            {name: "PHP", level: 75},
-            {name: "MySql", level: 75},
-            {name: "JQuery", level: 80},
-            {name: "Bootstrap", level: 70},
-            {name: "Responsive design", level: 90},
-            {name: "C", level: 75},
-            {name: "C++", level: 85},
-            {name: "C#", level: 65},
-            {name: "Java", level: 75},
-            {name: "JEE", level: 65},
-            {name: "POO", level: 85},
-            {name: "Python", level: 80},
-            {name: "Ocaml", level: 70},
-            {name: "Bash", level: 65},
-            {name: "Node.js", level: 75},
-            {name: "Git", level: 75},
-        ],
+
         os: {
             title: "Sistema de operaciones",
-            data: [
-                "Windows 10",
-                "GNU/Linux (Ubuntu)"
-            ],
         },
         softwares: {
             title: "Software",
-            data: [
-                "Microsoft Office",
-                "Libre Office",
-                "LATEX",
-                "VIM",
-                "Eclipse Java",
-                "RStudio",
-                "Scilab",
-                "StarUML"
-            ],
         },
     },
 
 
-
-
-}
+};

@@ -1,24 +1,13 @@
 DATA.fr = {
 
-    translation: "fr",
-
     title: "Recherche d'un stage de développement du 4 mai au 6 Septembre 2020",
 
     coordinates: {
-        name: "Clément Desableau",
         age: "21 ans",
         nationnality: "nationalité française",
-        address: "31 Boulevard d'Andilly",
-        city: "95230 Soisy-sous-Montmorency",
-        email: "clement.desableau@gmail.com",
-        phone: "07 80 09 54 70",
-        linkedin: "Clément Desableau",
-        github: "ClemDee",
     },
 
     objective: {
-        title: "Objective",
-        content: `French student at the EISTI, engineering school in computer science. I love to create. I love to learn.`,
         hide: true,
     },
 
@@ -35,11 +24,6 @@ DATA.fr = {
     languages: {
         title: "Langages",
         data: [
-            {
-                name: "French",
-                level: "Langue Maternelle",
-                hide: true,
-            },
             {
                 name: "Anglais",
                 level: "Courant",
@@ -114,7 +98,7 @@ DATA.fr = {
                 title: "TIPE - Réalisation d'une Intelligence Artificielle pour le jeu de plateau Quoridor",
                 date: "2016-2018",
                 location: "EISTI",
-                description: "Prise en main du logiciel Unity et du langage C#"
+                description: "Prise en main du logiciel Unity et du langage C#",
             },
         ],
     },
@@ -122,51 +106,14 @@ DATA.fr = {
 
     skills: {
         title: "Compétences Informatiques",
-        skill: [
-            {name: "Développement Web", level: 95},
-            {name: "HTML 5", level: 95},
-            {name: "CSS 3", level: 95},
-            {name: "Javascript", level: 93},
-            {name: "PHP", level: 75},
-            {name: "MySql", level: 75},
-            {name: "JQuery", level: 80},
-            {name: "Bootstrap", level: 70},
-            {name: "Responsive design", level: 90},
-            {name: "C", level: 75},
-            {name: "C++", level: 85},
-            {name: "C#", level: 65},
-            {name: "Java", level: 75},
-            {name: "JEE", level: 65},
-            {name: "POO", level: 85},
-            {name: "Python", level: 80},
-            {name: "Ocaml", level: 70},
-            {name: "Bash", level: 65},
-            {name: "Node.js", level: 75},
-            {name: "Git", level: 75},
-        ],
+
         os: {
             title: "Systèmes d'exploitation",
-            data: [
-                "Windows 10",
-                "GNU/Linux (Ubuntu)"
-            ],
         },
         softwares: {
             title: "Logiciels",
-            data: [
-                "Microsoft Office",
-                "Libre Office",
-                "LATEX",
-                "VIM",
-                "Eclipse Java",
-                "RStudio",
-                "Scilab",
-                "StarUML"
-            ],
         },
     },
 
 
-
-
-}
+};

@@ -7,11 +7,6 @@
         <title>CV</title>
         <script src="vue.min.js"></script>
         <link rel="stylesheet" href="fonts/Font-Awesome-master/css/all.min.css" />
-
-        <script>let DATA = {};</script>
-        <script src="translations/data.en.js"></script>
-        <script src="translations/data.es.js"></script>
-        <script src="translations/data.fr.js"></script>
     </head>
 
     <body>
@@ -44,7 +39,7 @@
                     <div>{{ data.hobbies.content }}</div>
                 </div>
 
-                <div class="language" v-if="!data.languages.hide">
+                <div class="language">
                     <h3>{{ data.languages.title }}</h3>
                     <div>
                         <div v-for="language in data.languages.data" v-if="!language.hide">{{ "- " + language.name + " (" + language.level + ")" }}</div>
@@ -95,7 +90,7 @@
                 <h2>{{ data.skills.title }}</h2>
 
                 <article class="skills-container">
-                    <span class="skill" v-for="skill in data.skills.skill" :style="'--level:' + skill.level + '%'">{{ skill.name }}</span>
+                    <span class="skill" v-for="skill in skills" :style="'--level:' + skill.level + '%'">{{ skill.name }}</span>
                 </article>
 
                 <article class="list-elt">
@@ -120,7 +115,7 @@
 
 
             <div class="translation-menu">
-                <div v-for="(_, translation) in DATA"
+                <div v-for="(translation) in Object.keys(DATA)"
                     :class="{translation: true, current: currentTranslation === translation}"
                     @click="changeTranslation(translation)"
                 >{{ translation }}</div>
@@ -128,6 +123,12 @@
 
         </div>
 
+
+
+        <script src="translations/data.default.js"></script>
+        <script src="translations/data.fr.js"></script>
+        <script src="translations/data.en.js"></script>
+        <script src="translations/data.es.js"></script>
         <script src="index.js"></script>
 
     </body>
